@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <!--  Title bar -->
+    <!--
+    -->
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_gravity="center_horizontal"
+        android:weightSum="3">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="#00af00" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="172dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="#cba12e"
+            android:text="Rename Album"
+            android:textAlignment="center"
+            android:textColor="#ffffff"
+            android:textSize="28dp" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="#00af00"
+            android:text=" " />
+    </LinearLayout>
+
+    <!--  Form for adding -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff"
+        android:padding="20dp"
+        android:weightSum="1">
+
+
+
+        <!--  Song name label -->
+
+        <!-- Song name field -->
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:layout_weight="0.05" />
+
+        <EditText
+            android:id="@+id/album_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_weight="0.05"
+            android:background="@android:drawable/editbox_background"
+            android:hint="Enter Album Name here"
+            android:textColor="#000000" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.24">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/save"
+                android:layout_gravity="right|center_vertical"
+                android:text="Save" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/cancel"
+                android:layout_gravity="left|center_vertical"
+                android:text="Cancel"
+                android:textColor="#ff0000"/>
+        </FrameLayout>
+
+        <!--  Song artist label -->
+
+        <!-- Song artist field -->
+
+        <!--  Song album label -->
+
+        <!-- Song album field -->
+
+        <!--  Song year label -->
+
+        <!-- Song year field -->
+
+        <!--  Buttons for save and cancel -->
+
+    </LinearLayout>
+
+</LinearLayout>

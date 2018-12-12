@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <!--  Title bar -->
+    <!--
+    -->
+
+    <!--  Form for adding -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="#00af00" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="142dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="#cba12e"
+            android:text="Name Album"
+            android:textAlignment="center"
+            android:textColor="#ffffff"
+            android:textSize="28sp" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="#00af00" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff"
+        android:padding="20dp"
+        android:weightSum="1">
+
+
+
+        <!--  Photo name label -->
+
+        <!-- Photo name field -->
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="73dp"
+            android:layout_weight="0.05" />
+
+        <EditText
+            android:id="@+id/new_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_weight="0.05"
+            android:background="@android:drawable/editbox_background"
+            android:hint="Click to Enter Name "
+            android:textColor="#000000" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.24">
+
+            <Button
+                android:id="@+id/save"
+                android:layout_width="104dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center_vertical"
+                android:text="Save" />
+
+            <Button
+                android:id="@+id/cancel"
+                android:layout_width="99dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center_vertical"
+                android:text="Cancel"
+                android:textColor="#ff0000"/>
+        </FrameLayout>
+
+        <!--  Photo artist label -->
+
+        <!-- Photo artist field -->
+
+        <!--  Photo album label -->
+
+        <!-- Photo album field -->
+
+        <!--  Photo year label -->
+
+        <!-- Photo year field -->
+
+        <!--  Buttons for save and cancel -->
+
+    </LinearLayout>
+
+</LinearLayout>

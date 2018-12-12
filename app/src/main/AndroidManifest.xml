@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.android.albumapp">
+    <uses-permission android:name="android.permission.MANAGE_DOCUMENTS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="com.android.providers.media.MediaDocumentsProvider"/>
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:largeHeap="true"
+        android:theme="@style/AppTheme">
+        <activity android:name="com.android.albumapp.HomeScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.android.albumapp.AlbumScreen"
+            android:parentActivityName="com.android.albumapp.HomeScreen"
+            android:grantUriPermissions = "true"
+            android:permission="android.permission.MANAGE_DOCUMENTS">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.android.albumapp.HomeScreen" />
+        </activity>
+        <activity
+            android:name="com.android.albumapp.PhotoScreen"
+            android:parentActivityName="com.android.albumapp.AlbumScreen" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.android.albumapp.AlbumScreen" />
+        </activity>
+        <activity
+            android:name="com.android.albumapp.RenameScreen"
+            android:parentActivityName="com.android.albumapp.HomeScreen" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.android.albumapp.HomeScreen" />
+        </activity>
+        <activity
+            android:name="com.android.albumapp.AddAlbumScreen"
+            android:parentActivityName="com.android.albumapp.HomeScreen" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.android.albumapp.HomeScreen" />
+        </activity>
+        <activity
+            android:name="com.android.albumapp.EditPhotoScreen"
+            android:parentActivityName="com.android.albumapp.PhotoScreen" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.android.albumapp.PhotoScreen" />
+        </activity>
+        <activity
+            android:name="com.android.albumapp.SearchScreen"
+            android:parentActivityName="com.android.albumapp.HomeScreen" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.android.albumapp.HomeScreen" />
+        </activity>
+        <activity
+            android:name="com.android.albumapp.ResultsScreen"
+            android:parentActivityName="com.android.albumapp.SearchScreen" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.android.albumapp.SearchScreen" />
+        </activity>
+        <activity
+            android:name="com.android.albumapp.ResultsPhotoScreen"
+            android:parentActivityName="com.android.albumapp.ResultsScreen" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.android.albumapp.ResultsScreen" />
+        </activity>
+        <activity
+            android:name="com.android.albumapp.ResultsPhotoEditScreen"
+            android:parentActivityName="com.android.albumapp.ResultsPhotoScreen" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.android.albumapp.ResultsPhotoScreen" />
+        </activity>
+
+        <activity
+            android:name="com.android.albumapp.MovePhoto"
+            android:parentActivityName="com.android.albumapp.ResultsPhotoScreen" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.android.albumapp.MovePhoto" />
+        </activity>
+
+
+    </application>
+
+</manifest>
